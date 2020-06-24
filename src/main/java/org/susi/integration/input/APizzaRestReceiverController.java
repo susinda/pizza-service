@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.integration.config.EnableIntegration;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.support.GenericMessage;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -42,6 +43,10 @@ public class APizzaRestReceiverController {
 		return request;
 	}
 
+	@GetMapping(value = "/check-config")
+    public String getDescription() { 
+        return "CONFIG :" + centralConfig.toString();
+    }
     
 	private GenericMessage<String> getInputMessage(String request) {
 		
