@@ -2,7 +2,7 @@
 FROM java:8
 
 # Copy files and directories from the application
-COPY target/pizza_service*.jar /opt/
+COPY target/pizza-service*.jar /opt/
 
 #set workdir
 WORKDIR /opt 
