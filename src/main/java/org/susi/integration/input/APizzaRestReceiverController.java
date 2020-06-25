@@ -45,7 +45,7 @@ public class APizzaRestReceiverController {
 
 	@GetMapping(value = "/health")
     public String getDescription() { 
-        return "I'm healthy";
+        return "I'm healthy,,  hhooww  abboouut  yyoouu";
     }
     
 	private GenericMessage<String> getInputMessage(String request) {
