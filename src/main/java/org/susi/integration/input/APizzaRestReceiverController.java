@@ -43,9 +43,9 @@ public class APizzaRestReceiverController {
 		return request;
 	}
 
-	@GetMapping(value = "/check-config")
+	@GetMapping(value = "/health")
     public String getDescription() { 
-        return "CONFIG :" + centralConfig.toString();
+        return "I'm healthy";
     }
     
 	private GenericMessage<String> getInputMessage(String request) {
