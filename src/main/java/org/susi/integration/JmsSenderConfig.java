@@ -29,10 +29,15 @@ public class JmsSenderConfig {
 	  p.setProperty(Context.PROVIDER_URL, centralConfig.getMbHost() + ":" + centralConfig.getMbPort() ); 
 	  p.setProperty(Context.SECURITY_PRINCIPAL,  centralConfig.getMbUserName() + "@" +  centralConfig.getMbMsgVPN());  
 	  p.setProperty(Context.SECURITY_CREDENTIALS, centralConfig.getMbPassword());  
+//	  p.setProperty(Context.INITIAL_CONTEXT_FACTORY, "com.solacesystems.jndi.SolJNDIInitialContextFactory"); 
+//	  p.setProperty(Context.PROVIDER_URL, "tcps://mr1gh5vh0idpun.messaging.solace.cloud" + ":" + "55443" ); 
+//	  p.setProperty(Context.SECURITY_PRINCIPAL,  "solace-cloud-client" + "@" +  "susisolace");  
+//	  p.setProperty(Context.SECURITY_CREDENTIALS, "nsr6cojucdr36s9l1i4u1lsh8");  
 	  jt.setEnvironment(p);
 	  jt.setEnvironment(p);
 	  return jt;
 	}
+
 	
     private JndiObjectFactoryBean producerConnectionFactory() {
         JndiObjectFactoryBean factoryBean = new JndiObjectFactoryBean();

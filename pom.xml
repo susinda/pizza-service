@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.susi.integration</groupId>
-	<artifactId>pizza-service</artifactId>
+	<artifactId>pizza_service</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
@@ -19,9 +19,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
-		<timestamp>${maven.build.timestamp}</timestamp>
-		<maven.build.timestamp.format>yyyyMMdd_HHmm</maven.build.timestamp.format>
-	</properties>
+    		<maven.build.timestamp.format>yyyyMMdd_HHmm</maven.build.timestamp.format>
+ 	 </properties>
 
 	<dependencies>
 		<!-- dependency>
@@ -198,7 +197,7 @@
                           <phase>install</phase>
                         </execution>
                         
-                        <!-- execution>
+                        <!--execution>
                           <id>tag-latest</id>
                           <goals>
                             <goal>tag</goal>
@@ -208,7 +207,7 @@
                             <tag>latest</tag>
                           </configuration>
                           <phase>install</phase>
-                        </execution-->
+                        </execution -->
                         
                         <execution>
                           <id>tag-version</id>
@@ -217,13 +216,14 @@
                             <goal>push</goal>
                           </goals>
                           <configuration>
-                              <tag>${git.commit.id.abbrev}-${maven.build.timestamp}</tag>
+                            <tag>${git.commit.id.abbrev}-${maven.build.timestamp}</tag>
                           </configuration>
                          <phase>install</phase>
                         </execution>
                     </executions>
-			  <configuration>
-			    <repository>susitestacr.azurecr.io/integration/${project.artifactId}</repository>
+		    <configuration>
+			    <useConfigFile>true</useConfigFile>
+			    <repository>susisacr.azurecr.io/integration/${project.artifactId}</repository>
 				<skip>false</skip>
 			  </configuration>
 			</plugin>

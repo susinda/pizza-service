@@ -10,7 +10,7 @@ public class OrderConverter {
 		List<String> orderArray = new ArrayList<String>();
 
 		try {
-			String template = "<order>\n\t<name>%s</name>\n\t<count>%s</count>\n\t<date>Today</date>\n</order>";
+			String template = "<order>\n\t<name>%s</name>\n\t<count>%s</count>\n</order>";
 			String[] orders = orderString.split("\n");
 			if (orders.length > 0) {
 				for (String order : orders) {
