@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.integration.http.config.EnableIntegrationGraphController;
 
+
 @EnableDiscoveryClient
 @SpringBootApplication
 @EnableIntegrationGraphController(allowedOrigins = "*")
